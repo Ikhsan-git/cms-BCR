@@ -1,0 +1,48 @@
+.s-form{
+    display: flex;
+}
+.s-input{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s-input .logo .s-logo{
+    width: 100px;
+    height: 34px;
+    background-color: #CFD4ED;
+    margin: 30px 0;
+}
+
+.s-input .logo h1{
+    width: 251px;
+    height: 36px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 30px 0;
+}
+
+.s-form .img-background .img-background{
+    width: 80%;
+}
+
+.s-form .img-background .img{
+    height: 100vh;
+}
+
+.i-form{
+    width: 400px;
+}
+
+.s-button{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+    background-color: blue !important;
+    color: white !important;
+}
