@@ -1,12 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './Cms-addCar.css'
+import './Cms-editCar.css'
 import Up from '../../Assets/fi_upload.png';
 
 const CmseditCar = () =>{
     return(
         <div className="f-addcar">
-            <h6>Add New Car</h6>
+            <h6>Edit Car</h6>
             <Form className='f-add'>
             <div className='f-all'>
             <div className='f-body'>
@@ -58,4 +58,4 @@ const CmseditCar = () =>{
         </div>
     )
 }
-export default CmsAddcar
+export default CmseditCar
