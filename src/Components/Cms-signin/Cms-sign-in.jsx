@@ -4,12 +4,15 @@ import Form from 'react-bootstrap/Form';
 import './Cms-sign-in.css';
 import { useEffect, useState } from 'react';
 import {useHistory} from 'react-router-dom';
+import Alert from 'react-bootstrap/Alert';
 
 function Login() {
 
         const [email,setEmail]=useState("");
         const [password,setPassword]=useState("");
         const history = useHistory();
+        const [error, setEror] = useState("");
+        
         useEffect(() => {
             const fungsiHistory = () =>{
                 if (localStorage.getItem('user-info')) {
@@ -35,10 +38,9 @@ function Login() {
         result = await result.json();   
         console.log(result)
 
-        let text = "abcdefg";
-
         if(result.email !== item.email && result.password !== item.password){
-            console.log(text)
+            setEror("Masukkan username dan password yang benar. Perhatikan penggunaan huruf kapital.")
+
             // localStorage.setItem("user-info",JSON.stringify(result))
             // history.push("/add");
         }else{
@@ -61,11 +63,14 @@ function Login() {
                     <div className="logo">
                         <div className="s-logo"></div>
                         <h1>Welcome, Admin BCR</h1>
+                        
                     </div>
+                    
                     <Form className='i-form'>
+                    {(error != "") ? (<Alert className='alert' variant='danger'>{error}</Alert>) : ""}
                         <Form.Group className="mb-3">
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="text" placeholder="Contoh: johndee@gmail.com" onChange={(e)=>setEmail(e.target.value)} />
+                            <Form.Control type="email" placeholder="Contoh: johndee@gmail.com" onChange={(e)=>setEmail(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
