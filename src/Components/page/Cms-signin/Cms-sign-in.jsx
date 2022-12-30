@@ -1,4 +1,4 @@
-import Fbackground from '../../Assets/image 2.jpg';
+import Fbackground from '../../../Assets/image 2.jpg';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './Cms-sign-in.css';
@@ -41,12 +41,10 @@ function Login() {
         if(result.email !== item.email && result.password !== item.password){
             setEror("Masukkan username dan password yang benar. Perhatikan penggunaan huruf kapital.")
 
-            // localStorage.setItem("user-info",JSON.stringify(result))
-            // history.push("/add");
         }else{
             localStorage.setItem("user-info",JSON.stringify(result))
-            history.push("/add");
-            console.log('berhasil')
+            history.push("/sidebar");
+           
         }
 
         // localStorage.setItem("user-info",JSON.stringify(result))

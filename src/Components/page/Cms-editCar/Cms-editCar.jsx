@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './Cms-editCar.css'
-import Up from '../../Assets/fi_upload.png';
+import Up from '../../../Assets/fi_upload.png';
 
 const CmseditCar = () =>{
     return(
